@@ -38,7 +38,7 @@ intellijPlatform {
             <b>Usage:</b>
             <ul>
                 <li>Select a property path like 'balance.main.title'</li>
-                <li>Press Cmd+Option+F (macOS) or Ctrl+Alt+Shift+F (Windows/Linux)</li>
+                <li>Press Cmd+Shift+Option+F (macOS) or Ctrl+Alt+Shift+F (Windows/Linux)</li>
                 <li>Click on a result to navigate to the JSON property</li>
             </ul>
         """.trimIndent()
