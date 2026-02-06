@@ -1,0 +1,17 @@
+{
+  "balance": {
+    "main": {
+      "title": "Main Balance",
+      "subtitle": "Your current balance",
+      "currency": "USD"
+    },
+    "bonus": {
+      "title": "Bonus Balance",
+      "points": 1500
+    }
+  },
+  "settings": {
+    "theme": "dark",
+    "language": "en"
+  }
+}

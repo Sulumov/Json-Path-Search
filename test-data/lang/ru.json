@@ -1,0 +1,17 @@
+{
+  "balance": {
+    "main": {
+      "title": "Основной баланс",
+      "subtitle": "Ваш текущий баланс",
+      "currency": "RUB"
+    },
+    "bonus": {
+      "title": "Бонусный баланс",
+      "points": 1500
+    }
+  },
+  "settings": {
+    "theme": "dark",
+    "language": "ru"
+  }
+}

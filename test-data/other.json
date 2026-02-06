@@ -1,0 +1,9 @@
+{
+  "app": {
+    "balance": {
+      "main": {
+        "title": "Account Balance"
+      }
+    }
+  }
+}

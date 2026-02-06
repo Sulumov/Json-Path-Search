@@ -1,0 +1,55 @@
+<idea-plugin>
+    <id>com.jsonpathsearch</id>
+    <name>JSON Path Search</name>
+    <vendor>JSON Path Search</vendor>
+
+    <description><![CDATA[
+    Search JSON files for nested property paths and navigate to their locations.
+    <br><br>
+    <b>Usage:</b>
+    <ul>
+        <li>Select a property path like 'balance.main.title'</li>
+        <li>Press Cmd+Shift+Option+F (macOS) or Ctrl+Alt+Shift+F (Windows/Linux)</li>
+        <li>Click on a result to navigate to the JSON property</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.json</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService 
+            serviceImplementation="com.jsonpathsearch.services.JsonSearchService"/>
+        <projectService 
+            serviceImplementation="com.jsonpathsearch.settings.JsonSearchSettings"/>
+        <projectConfigurable
+            parentId="tools"
+            instance="com.jsonpathsearch.settings.JsonSearchConfigurable"
+            id="jsonPathSearch.settings"
+            displayName="JSON Path Search"
+            nonDefaultProject="true"/>
+    </extensions>
+
+    <actions>
+        <action 
+            id="com.jsonpathsearch.SearchJsonProperty"
+            class="com.jsonpathsearch.actions.SearchJsonPropertyAction"
+            text="Search JSON Property Path"
+            description="Search for JSON property path in project files"
+            icon="AllIcons.Actions.Search">
+            
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditMenu" anchor="after" relative-to-action="Find"/>
+            
+            <!-- macOS: Cmd+Shift+Option+F -->
+            <keyboard-shortcut 
+                keymap="Mac OS X 10.5+" 
+                first-keystroke="meta shift alt F"/>
+            
+            <!-- Windows/Linux: Ctrl+Alt+Shift+F -->
+            <keyboard-shortcut 
+                keymap="$default" 
+                first-keystroke="ctrl alt shift F"/>
+        </action>
+    </actions>
+</idea-plugin>
